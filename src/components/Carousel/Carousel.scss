@@ -1,0 +1,15 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel__frame {
+  overflow: hidden;
+}
+
+.carousel__list {
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: ease;
+}
