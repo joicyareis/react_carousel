@@ -40,62 +40,61 @@ export class App extends React.Component<{}, State> {
       <div className="App">
         <h1 data-cy="title"> Carousel with {images.length} images</h1>
 
-        <label>
-          Item width:
-          <input
-            type="number"
-            value={itemWidth}
-            min="1"
-            onChange={event => {
-              this.setState({
-                itemWidth: Number(event.target.value),
-              });
-            }}
-          />
-        </label>
+        <label htmlFor="itemId">Item width:</label>
 
-        <label>
-          Frame size:
-          <input
-            type="number"
-            value={frameSize}
-            min="1"
-            max={images.length}
-            onChange={event => {
-              this.setState({
-                frameSize: Number(event.target.value),
-              });
-            }}
-          />
-        </label>
+        <input
+          id="itemId"
+          type="number"
+          value={itemWidth}
+          min="1"
+          onChange={event => {
+            this.setState({
+              itemWidth: Number(event.target.value),
+            });
+          }}
+        />
 
-        <label>
-          Step:
-          <input
-            type="number"
-            value={step}
-            min="1"
-            onChange={event => {
-              this.setState({
-                step: Number(event.target.value),
-              });
-            }}
-          />
-        </label>
+        <label htmlFor="frameId">Frame size:</label>
+        <input
+          id="frameId"
+          type="number"
+          value={frameSize}
+          min="1"
+          max={images.length}
+          onChange={event => {
+            this.setState({
+              frameSize: Number(event.target.value),
+            });
+          }}
+        />
 
-        <label>
-          Animation duration:
-          <input
-            type="number"
-            value={animationDuration}
-            min="0"
-            onChange={event => {
-              this.setState({
-                animationDuration: Number(event.target.value),
-              });
-            }}
-          />
-        </label>
+        <label htmlFor="stepId">Step:</label>
+
+        <input
+          id="stepId"
+          type="number"
+          value={step}
+          min="1"
+          onChange={event => {
+            this.setState({
+              step: Number(event.target.value),
+            });
+          }}
+        />
+
+        <label htmlFor="animationId">Animation duration:</label>
+
+        <input
+          id="animationId"
+          type="number"
+          value={animationDuration}
+          min="0"
+          onChange={event => {
+            this.setState({
+              animationDuration: Number(event.target.value),
+            });
+          }}
+        />
 
         <Carousel
           images={images}

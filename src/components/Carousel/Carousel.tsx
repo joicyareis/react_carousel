@@ -81,7 +81,7 @@ export const Carousel = ({
           width: `${itemWidth * frameSize}px`,
         }}
       >
-        <div
+        <ul
           className="carousel__list"
           style={{
             transform: `translateX(-${firstVisibleImage * itemWidth}px)`,
@@ -89,17 +89,21 @@ export const Carousel = ({
           }}
         >
           {images.map((image, index) => (
-            <img
-              src={image}
-              alt={`Carousel item ${index + 1}`}
-              className="carousel__image"
+            <li
+              className="carousel__item"
               style={{
                 width: `${itemWidth}px`,
               }}
               key={image}
-            />
+            >
+              <img
+                src={image}
+                alt={`Carousel item ${index + 1}`}
+                className="carousel__image"
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       <button
