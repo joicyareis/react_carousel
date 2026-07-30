@@ -100,6 +100,7 @@ export const Carousel = ({
                 src={image}
                 alt={`Carousel item ${index + 1}`}
                 className="carousel__image"
+                width={itemWidth}
               />
             </li>
           ))}
